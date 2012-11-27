@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-20 09:29+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/app.cc:259
+msgid "<b>can't load list,,click Update on the Tweaker tab</b>"
+msgstr ""
+
+#. window properties
+#: ../src/mywindow.cc:28
+msgid "Omanix Tweaker"
+msgstr ""
+
+#: ../src/mywindow.cc:51
+msgid "Main"
+msgstr ""
+
+#: ../src/mywindow.cc:52
+msgid "Tweaker"
+msgstr ""
+
+#: ../src/mywindow.cc:53
+msgid "Setting"
+msgstr ""
+
+#: ../src/mywindow.cc:54
+msgid "Update"
+msgstr ""
+
+#: ../src/mywindow.cc:55
+msgid "About"
+msgstr ""
+
+#: ../src/mywindow.cc:56
+msgid "عربي"
+msgstr ""
+
+#: ../src/mywindow.cc:57
+msgid "<b><span size='38000'> Omanix Tweaker</span></b>"
+msgstr ""
+
+#: ../src/mywindow.cc:104
+msgid "Tweak ID"
+msgstr ""
+
+#: ../src/mywindow.cc:105
+msgid "Tweak Type"
+msgstr ""
+
+#: ../src/mywindow.cc:106
+msgid "Tweak Name"
+msgstr ""
+
+#: ../src/mywindow.cc:107
+msgid "Tweak Distro"
+msgstr ""
+
+#: ../src/mywindow.cc:108
+msgid "Tweak status"
+msgstr ""
+
+#. //
+#: ../src/mywindow.cc:115
+msgid "Install"
+msgstr ""
+
+#: ../src/mywindow.cc:119
+msgid "Remove"
+msgstr ""
+
+#: ../src/mywindow.cc:123
+msgid "Description"
+msgstr ""
+
+#: ../src/mywindow.cc:220
+msgid "<b>The list has been updated</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:243
+msgid "<b>The tweak has been installed</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:249
+msgid "<b>There is error when installing the tweak</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:256
+msgid "<b>The tweak is installed</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:263
+msgid "<b>Select any tweak to install</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:288
+msgid "<b>The tweak has been removed</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:294
+msgid "<b>There is error when removing the tweak</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:301
+msgid "<b>The Tweak is not installed</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:309
+msgid "<b>Select any tweak to remove it</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:343
+msgid "<b>Select any tweak to view its description</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:359
+msgid "<b>قم بإعادة تشغيل البرنامج</b>"
+msgstr ""
+
+#: ../src/mywindow.cc:366
+msgid ""
+"<b>\tThis program come under GPL3. Thanks for all who support me \n"
+"\n"
+"\t\t\t\t\tAhmed Said Al-Yahyai\n"
+"\t\t\t\t\tblackheart10001@gmail.com\n"
+"\n"
+"\t\t\t\t\t\t\tCredit:\n"
+"\t\t\t\t\t\tSaid Al Ramdhani\n"
+"\t\t\t\t\tdarknesscore0@gmail.com</b>"
+msgstr ""
+
+#: ../src/hardware-info.cc:25
+msgid "\tCPU Model:\t"
+msgstr ""
+
+#: ../src/hardware-info.cc:26
+msgid "\tMemory:\t\t"
+msgstr ""
+
+#: ../src/hardware-info.cc:28
+msgid "\tCPU Cores\t"
+msgstr ""
+
+#: ../src/hardware-info.cc:44
+msgid "<b> Hardware Information</b>"
+msgstr ""
+
+#: ../src/user-info.cc:25
+msgid "\tUser Name:\t"
+msgstr ""
+
+#: ../src/user-info.cc:26
+msgid "\tHome Dir:\t\t"
+msgstr ""
+
+#: ../src/user-info.cc:27
+msgid "\tshell:\t\t\t"
+msgstr ""
+
+#: ../src/user-info.cc:28
+msgid "\tlanguage\t\t"
+msgstr ""
+
+#: ../src/user-info.cc:44
+msgid "<b>  User Information</b>"
+msgstr ""
+
+#: ../src/desktop-info.cc:25
+msgid "\tubuntu release:\t"
+msgstr ""
+
+#: ../src/desktop-info.cc:26
+msgid "\tKenerl version:\t"
+msgstr ""
+
+#: ../src/desktop-info.cc:27
+msgid "\tHost Name:\t\t"
+msgstr ""
+
+#: ../src/desktop-info.cc:28
+msgid "\tUptime:\t\t"
+msgstr ""
+
+#: ../src/desktop-info.cc:29
+msgid "\tEnviroment:\t\t"
+msgstr ""
+
+#: ../src/desktop-info.cc:30
+msgid "\tPlatform:\t\t\t"
+msgstr ""
+
+#: ../src/desktop-info.cc:48
+msgid "<b>  Desktop Information</b>"
+msgstr ""

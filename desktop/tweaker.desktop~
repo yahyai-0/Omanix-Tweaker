@@ -1,0 +1,13 @@
+
+[Desktop Entry]
+Name=Tweaker
+Comment=find best tweaks and hacks
+Exec=tweaker
+Icon=tweaker
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;System;
+
+Name[en_US]=tweaker

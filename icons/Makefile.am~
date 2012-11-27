@@ -1,0 +1,35 @@
+## File created by the gnome-build tools
+SUBDIRS = 32x32 48x48 scalable
+
+themedir = ${datadir}/icons/hicolor
+
+gtk_update_icon_cache = gtk-update-icon-cache -f -t ${themedir}
+
+install-data-hook: update-icon-cache
+uninstall-hook: update-icon-cache
+
+update-icon-cache:
+	@-if test -z "$(DESTDIR)"; then \
+		echo "Updating Gtk icon cache."; \
+		$(gtk_update_icon_cache); \
+	else \
+		echo "*** Icon cache not updated.  After install, run this:"; \
+		echo "***   $(gtk_update_icon_cache)"; \
+	fi
+## toolbar icons
+iconsdir = $(datadir)/omanix-tweaker/icons
+icons_DATA = \
+	ubuntu.png\
+	install.png\
+	info.png\
+	update.png\
+	remove.png\
+	user.png\
+	hardware.png\
+	about.png\
+	OmanixTweaker.svg 
+	
+
+
+EXTRA_DIST = \
+	$(icons_DATA)

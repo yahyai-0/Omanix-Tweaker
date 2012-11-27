@@ -1,0 +1,100 @@
+/*
+ * Ahmed Al-Yahyai
+ * blackheart10001@gmail.com
+ * 
+ * Omanix Tweaker is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Omanix Tweaker is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "database.h"
+
+
+SQLiteDB::SQLiteDB()
+{
+	db = NULL;
+}
+
+SQLiteDB::~SQLiteDB()
+{
+	sqlite3_close(db);
+}
+
+void SQLiteDB::close()
+{
+	sqlite3_close(db);
+}
+
+bool SQLiteDB::exists(string filename)
+{
+	struct stat st;
+	if(stat(filename.c_str() ,&st) == 0)
+        return true;
+	else
+		return false;
+}
+
+bool SQLiteDB::open(string fileName)
+{
+	char * file=(char*)fileName.c_str();
+	if(exists(fileName) && (sqlite3_open(file, &db) == SQLITE_OK)   )
+	{
+		cerr<<"opennnnnnn\n";
+		return true;
+	}
+	else
+		return false;   
+}
+
+void SQLiteDB::finalize()
+{
+	rc =sqlite3_finalize(ppStmt);
+}
+
+int SQLiteDB::getRC()const
+{
+	return rc;
+}
+
+vector<string> SQLiteDB::nextRecord()
+{
+	int cols=0;
+	string tmp;
+	vector<string> record;
+	cols = sqlite3_column_count(ppStmt);
+	
+	rc = sqlite3_step(ppStmt);
+		
+	if (rc == SQLITE_ROW)
+		{
+			for (int col = 0; col < cols; col++)
+			{
+				char *ptr =(char*)sqlite3_column_text(ppStmt, col);
+				if(ptr)
+					tmp = ptr;
+				else tmp = "";
+					record.push_back(tmp);
+			}
+			return record;
+		}
+}
+
+
+vector<string> SQLiteDB::query(string q)
+{
+	
+	if(sqlite3_prepare_v2(db, &q[0], -1, &ppStmt, 0) == SQLITE_OK)
+	{
+		return nextRecord();
+	}
+	
+}

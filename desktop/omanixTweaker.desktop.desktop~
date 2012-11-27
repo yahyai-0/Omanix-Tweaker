@@ -1,0 +1,13 @@
+
+[Desktop Entry]
+Name=Omanix Tweaker
+Comment=find best tweaks and hacks
+Exec=omanix-tweaker
+Icon=tweaker
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;System;
+
+Name[en_US]=omanixTweaker.desktop

@@ -1,0 +1,6 @@
+	/home/zero/omanix-tweaker/src/main.cc \
+	/home/zero/omanix-tweaker/src/app.cc \
+	/home/zero/omanix-tweaker/src/mywindow.cc  \
+	/home/zero/omanix-tweaker/src/hardware-info.cc \
+	/home/zero/omanix-tweaker/src/user-info.cc \
+	/home/zero/omanix-tweaker/src/desktop-info.cc

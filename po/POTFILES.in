@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+
+src/main.cc
+src/app.cc
+src/mywindow.cc 
+src/hardware-info.cc
+src/user-info.cc
+src/desktop-info.cc

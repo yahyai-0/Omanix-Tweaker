@@ -1,0 +1,84 @@
+/*
+ *  Ahmed Al-Yahyai
+ * blackheart10001@gmail.com
+ * 
+ * Omanix Tweaker is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Omanix Tweaker is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#ifndef _APP_H_
+#define _APP_H_
+
+#include <glibmm/i18n.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+#include <errno.h>
+#include <libtar.h>
+#include <pwd.h>
+#include <gconfmm.h>
+#include <gtkmm/progressbar.h>
+#include <libsoup/soup-gnome.h>
+#include <gtkmm/infobar.h>
+#include "stringformat.h"
+#include "treeModel.h"
+#include "urls.h"
+#include "database.h"
+
+using namespace std;
+
+class App
+{
+	SQLiteDB *db;
+	Url *urls;
+	short numOfUrls;
+	guint serverPkgVer ;
+	Glib::ustring  ProgDir;	
+	
+	public:
+		App();
+		~App();
+
+		void setLang(Glib::ustring lang);
+		Glib::ustring getLang() const;
+		
+		void creatProgDir();//for first run
+		void getProgDir(); //retrive Progir form Gconf
+
+		short getNumOfUrls()const {return numOfUrls;};
+		guint getServerPkgVer();
+		guint getClientPkgVer();
+		void setClientPkgVer(guint PkgVer);
+
+		Url *getURLS(guint SPkgVer , guint CPkgVer);
+		void downloadPkg(Url* , Gtk::ProgressBar &P);
+		void downloadList(string url , guint Method); //0 to download TweakList , 1 to check ServerPkgVer
+
+		void downloadTweakList();
+		void loadTweakList(Glib::RefPtr<Gtk::ListStore> &refTreeModel , ModelColumnsTweak &col ,Gtk::InfoBar &infobar , Gtk::Label &labe1); //load the tweakList
+
+		string getPkgPath(Gtk::TreeModel::iterator &iter , ModelColumnsTweak &col , string command) const;
+		int extract(string tarfile , string rootDir);
+		int SH(string path);
+
+		string getTweakStatus(string ID);
+		void setTweakStatus(string stat , string ID);
+		
+		
+		Glib::RefPtr<Gnome::Conf::Client> client;
+		
+};
+
+#endif // _UPDATE_H_

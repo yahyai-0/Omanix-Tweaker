@@ -1,0 +1,45 @@
+## Process this file with automake to produce Makefile.in
+
+## Created by Anjuta
+
+
+
+AM_CPPFLAGS = \
+	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
+	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+	-DPROGRAMNAME_LOCALEDIR=\"${PROGRAMNAME_LOCALEDIR}\"\
+	$(OMANIX_TWEAKER_CFLAGS)
+
+AM_CFLAGS =\
+	 -Wall\
+	 -g
+	 
+
+bin_PROGRAMS = omanix-tweaker
+
+omanix_tweaker_SOURCES = \
+	main.cc \
+	app.cc \
+	app.h \
+	mywindow.cc \
+	mywindow.h \
+	treeModel.h \
+	urls.h \
+	database.cc \
+	database.h \
+	sysinfo.h \
+	sysinfo.cc \
+	stringformat.h \
+	hardware-info.h \
+	hardware-info.cc \
+	desktop-info.cc \
+	desktop-info.h \
+	user-info.cc \
+	user-info.h 
+
+omanix_tweaker_LDFLAGS = -ltar -lsqlite3
+
+omanix_tweaker_LDADD = $(OMANIX_TWEAKER_LIBS)
+
+
